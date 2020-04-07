@@ -9,8 +9,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    let questions = Question.all()
+    @State private var isDone = true
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Toggle(isOn: $isDone) {
+                Text("Sadece Pascal soruları")
+                    .font(.body)
+            }
+            .padding(.horizontal)
+            
+            NavigationView {
+                List(isDone ? self.questions.filter{ $0.isCompleted == true} : self.questions
+                    
+                
+                , id: \.name) {question in
+                    //NavigationLink(destination: QuestionSolutionImageView(question: question)) {
+                    //NavigationLink(destination: QuestionSolutionVideoView(question: question)) {
+                    NavigationLink(destination: SolutionVideoView(question: question)) {
+                        QuestionRow(question: question)
+                    
+                    }
+                    .navigationBarTitle(question.testPaper)
+                }
+            }
+        }
     }
 }
 
@@ -19,3 +43,6 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+
