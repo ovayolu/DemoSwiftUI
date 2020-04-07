@@ -12,6 +12,8 @@ import SwiftUI
 
 //adapted from appointment app
 //will make some changes...
+// new features
+
 
 struct RootView: View {
     var body: some View {
