@@ -34,10 +34,10 @@ struct RootView: View {
 struct MenuView: View {
     var body: some View {
         List {
-            link(icon: "calendar", label: "Biyoloji", destination: AppointmentListView())
-            link(icon: "list.bullet", label: "Fizik", destination: TestPapersListView())
-            link(icon: "rectangle.stack.person.crop", label: "Türkçe", destination: TestPapersListView())
-            link(icon: "calendar", label: "Kimya", destination: TestPapersListView())
+            link(icon: "calendar", label: "Biology", destination: AppointmentListView())
+            link(icon: "list.bullet", label: "Physics", destination: TestPapersListView())
+            link(icon: "rectangle.stack.person.crop", label: "Turkish", destination: TestPapersListView())
+            link(icon: "calendar", label: "Chemistry", destination: TestPapersListView())
         }.navigationBarTitle(Text("Menu"), displayMode: .large)
     }
 

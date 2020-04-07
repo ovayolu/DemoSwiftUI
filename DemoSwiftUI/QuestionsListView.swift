@@ -20,7 +20,7 @@ struct QuestionsListView: View {
                     QuestionRow(question: question)
                 
                 }
-                .navigationBarTitle("Test 1", displayMode: .inline)
+                .navigationBarTitle("Test 12", displayMode: .inline)
             }
         }
     }
