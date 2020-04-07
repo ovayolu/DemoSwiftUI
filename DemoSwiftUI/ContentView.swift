@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+//now contentview is updated
+
 struct ContentView: View {
     let questions = Question.all()
     @State private var isDone = true
